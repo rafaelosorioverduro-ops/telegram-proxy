@@ -3,7 +3,7 @@ const fetch = require("node-fetch");
 const app = express();
 
 const  TOKEN = "8572280228:AAHZ_gN0pJ8MMZ5EjNOoz7u5HGXsLyFFGo4";
-const const CHAT_ID = "8231324366";
+const  CHAT_ID = "8231324366";
 
 app.get("/send.php", async (req, res) => {
   const texto = req.query.msg || "Mensaje vacío";
