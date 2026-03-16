@@ -2,8 +2,8 @@ const express = require("express");
 const fetch = require("node-fetch");
 const app = express();
 
-const  TOKEN = "8572280228:AAHZ_gN0pJ8MMZ5EjNOoz7u5HGXsLyFFGo4";
-const  CHAT_ID = "8231324366";
+const TOKEN = "8572280228:AAHZ_gN0pJ8MMZ5EjNOoz7u5HGXsLyFFGo4";
+const CHAT_ID = "8231324366";
 
 app.get("/send.php", async (req, res) => {
   const texto = req.query.msg || "Mensaje vacío";
@@ -27,4 +27,6 @@ app.get("/send.php", async (req, res) => {
 });
 
 const PORT = process.env.PORT || 3000;
-app.listen(PORT);
+app.listen(PORT, () => {
+  console.log("Servidor escuchando en el puerto " + PORT);
+});
